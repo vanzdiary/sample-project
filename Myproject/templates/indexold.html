@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
+    </head>
+    <body>
+        <h1> Hai welcome to our site</h1>
+        <a href="">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="about">About</a>
+        <a href="show">Show</a>
+        <h1>Name is {{name}}</h1>
+        <h1>Age is {{age}}</h1>
+        <h1>Place is {{place}}</h1>
+        {% if age == 18 %}
+        <h2>Eligible</h2>
+        {% elif age > 25 %}
+        <h2>Well Settled </h2>
+        {% else %}
+        <h2> Not Settled</h2>
+        {% endif %}
+        {% for i in 'DJANGO' %}
+        <h4>{{ i }}</h4>
+        {% endfor %}
+        <script src="" async defer></script>
+    </body>
+</html>
